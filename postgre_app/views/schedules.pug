@@ -1,0 +1,9 @@
+extends base
+
+block content
+    each schedule in schedules
+        div
+        p User id: #{schedule.user_id}
+        p Day: #{schedule.day}
+        p Start at: #{schedule.start_at}
+        p End at: #{schedule.end_at}

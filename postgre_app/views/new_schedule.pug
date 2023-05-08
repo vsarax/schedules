@@ -1,0 +1,38 @@
+extends base
+block content
+    main
+        form(action="/schedules/new", method="post")
+            label(for='user_id') User id:
+                select(name="user_id")
+                    each user, index in users
+                        option(value=index) #{user.firstname} #{user.lastname}
+            br
+            label(for='day') Day:
+                select(name="day")
+                    option(value="1") Monday
+                    option(value="2") Tuesday
+                    option(value="3") Wednesday
+                    option(value="4") Thursday
+                    option(value="5") Friday
+                    option(value="6") Saturday
+                    option(value="7") Sunday
+            br
+            label(for='start_at') Start at:
+                select(name="start_at")
+                    option(value="08:00") 8 AM
+                    option(value="09:00") 9 AM
+                    option(value="10:00") 10 AM
+                    option(value="11:00") 11 AM
+                    option(value="12:00") 12 AM
+                    option(value="13:00") 1 PM
+                    option(value="14:00") 2 PM
+            br
+            label(for='end_at') End at:
+                select(name="end_at")
+                    option(value="14:00") 2 PM
+                    option(value="15:00") 3 PM
+                    option(value="16:00") 4 PM
+                    option(value="17:00") 5 PM
+                    option(value="18:00") 6 PM
+            br
+            input(type="submit" value="Add schedule")

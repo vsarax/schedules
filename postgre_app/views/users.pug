@@ -1,0 +1,9 @@
+extends base
+
+block content
+    each user in users
+        div
+        p Name: #{user.firstname}
+        p Lastname: #{user.lastname}
+        p Email: #{user.email}
+        p Password: #{user.password}

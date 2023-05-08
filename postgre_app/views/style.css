@@ -1,0 +1,46 @@
+h1{
+    background-color: #6a7b8b;
+    color: white;
+    text-align: center;
+    padding: 15px 0 15px 0;
+}
+
+body{
+    background-color: #ededf0;
+}
+
+h2{
+    color: #5c5b5b;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+div{
+    margin: auto;
+    max-width: 800px;
+    background-color: #6a7b8b;
+    padding: 2px
+  }
+  
+p{
+    color: #5c5b5b;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+.userID{
+    padding: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
