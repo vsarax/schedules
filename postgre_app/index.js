@@ -167,21 +167,6 @@ app.post('/schedules/new', async (req, res) => {
     })
 })
 
-app.delete('/users/:user_id', async (req, res)=> {
-    const user_id = parseInt(req.params['user_id'], 10);
-    console.log(user_id)
-
-    await pool.query(`DELETE FROM users WHERE id = ${user_id}`, (err, result) => {
-        if (err) {
-                  console.error('Error: ', err.message);
-                  res.status(500).send('Server error');
-        } else {
-                console.log('The user has been removed from the database');
-                res.status(200).send('The user has been removed');
-        }
-    })
-})
-
 app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`);
 })
